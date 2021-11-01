@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:TruckSlot.Helpers"
+             BackgroundColor="White"
+             x:Class="TruckSlot.Views.CountryPage">
+    
+        <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  BackgroundColor="#004567">
+                <Label Text="Welcome to Truck Lot Meter" FontSize="Large" HorizontalOptions="FillAndExpand" XAlign="Center" Padding="0,20" BackgroundColor="#004567" TextColor="White"/>
+            </StackLayout>
+            <Grid Grid.Row="1" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                   
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Picker Grid.Row="1" ItemsSource="{Binding list}" ItemDisplayBinding="{Binding NAME}" Grid.ColumnSpan="2" FontSize="Medium" Title="Location" x:Name="Location" TextColor="Black" />
+                <Entry Grid.Row="2" Grid.ColumnSpan="2" Placeholder="Slots" FontSize="Medium"  x:Name="Slots"  Keyboard="Numeric" TextColor="Black" MaxLength="3"/>
+                <Entry Grid.Row="3" Grid.ColumnSpan="2" Placeholder="Phone No" FontSize="Medium"  x:Name="PhoneNo"  Keyboard="Numeric"  TextColor="Black" MaxLength="14">
+                    <Entry.Behaviors>
+                        <behavior:MaskedBehavior Mask="(XXX) XXX-XXXX" />
+                    </Entry.Behaviors>
+                </Entry>
+                <BoxView   Grid.Row="5" Grid.ColumnSpan="2" HorizontalOptions="Fill"  Margin="40,0,40,0" Color="#004567"/>
+                <Label Grid.Row="6" Text="Payment Infomation" Grid.ColumnSpan="2" FontSize="Medium" HorizontalOptions="Center" TextColor="#004567"/>
+                <ImageButton Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" Source="Card.png"/>
+                <Entry Grid.Row="8" Grid.ColumnSpan="2" Placeholder="Card Name" FontSize="Medium"  x:Name="CardName"  TextColor="Black"/>
+                <Entry Grid.Row="9" Grid.ColumnSpan="2" Placeholder="Card Number" FontSize="Medium"  x:Name="CardNumber" Keyboard="Numeric" TextColor="Black" MaxLength="19">
+                    <Entry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XXXX XXXX XXXX XXXX" />
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="10" Grid.Column="0" Placeholder="Expire Date" FontSize="Medium"  x:Name="ExpireDate"  Keyboard="Numeric" TextColor="Black"  MaxLength="5">
+                    <Entry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX/XX" />
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="10" Grid.Column="1" Placeholder="CVV" FontSize="Medium"  x:Name="CVV"  Keyboard="Numeric" TextColor="Black" MaxLength="4"/>
+                <Button Grid.Row="11" Grid.ColumnSpan="2" BackgroundColor="#84ad06" x:Name="submit" FontSize="Medium" BorderWidth="1" BorderColor="Black"  CornerRadius="10" Text="Submit" Clicked="submit_Clicked" TextColor="White"/>
+                    <BoxView   Grid.Row="12" Grid.ColumnSpan="2" HorizontalOptions="Fill"  Margin="40,0,40,0"/>
+                </Grid>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>   
+</ContentPage>
