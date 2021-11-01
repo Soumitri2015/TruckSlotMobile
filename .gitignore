@@ -83,3 +83,11 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+/.vs
+*.cs
+*.cache
+*.editorconfig
+*.flat
+/TruckSlot.Android/obj/Release/110/res/drawable
+/TruckSlot.Android/obj/Release/110/res
+/TruckSlot.Android/obj/Release/110
