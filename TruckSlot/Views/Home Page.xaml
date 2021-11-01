@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruckSlot.Views.Home_Page">
+    <NavigationPage.TitleView>
+        <Label Text="TrucksLot"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="white"/>
+
+    </NavigationPage.TitleView>
+
+    <ContentPage.ToolbarItems>
+       
+        <ToolbarItem 
+            Text="Scan Slot Qr Code"
+            Clicked="TapGestureRecognizer_Tapped"
+                 />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+      
+        <Grid BackgroundColor="White">
+            <Label Text="SiteName : Bhubaneswar"
+                   FontSize="Large"
+                   TextColor="Black"
+                   BackgroundColor="White"
+                FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

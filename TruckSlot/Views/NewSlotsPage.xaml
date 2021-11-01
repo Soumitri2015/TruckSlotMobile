@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruckSlot.Views.NewSlotsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding BookList}"
+                                  BackgroundColor="White"
+                                  HasUnevenRows="True">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition  Width="*" />
+                <ColumnDefinition  Width="*" />
+                <ColumnDefinition  Width="*" />
+                <ColumnDefinition  Width="*" />
+                
+            </Grid.ColumnDefinitions>
+            <Frame BackgroundColor="White" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="1">
+                <StackLayout>
+                                        <Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            
+                                        </Image>
+                                        <Image Source="{Binding Slots[1].Image}" x:Name="{Binding Slots[1].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            
+                                        </Image>
+                                        <Image Source="{Binding Slots[2].Image}" x:Name="{Binding Slots[2].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            
+                                        </Image>
+                                        <Image Source="{Binding Slots[3].Image}" x:Name="{Binding Slots[3].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                           
+                                        </Image>
+                                        <Image Source="{Binding Slots[4].Image}" x:Name="{Binding Slots[4].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                          
+                                        </Image>
+
+                                        <!--<Image Source="bookedspace.png" HeightRequest="100" WidthRequest="500" VerticalOptions="StartAndExpand">
+
+                        </Image>
+                    <Image Source="bookedspace.png" HeightRequest="100" WidthRequest="500" VerticalOptions="StartAndExpand">
+
+                    </Image>
+                    <Image Source="bookedspace.png" HeightRequest="100" WidthRequest="500" VerticalOptions="StartAndExpand">
+
+                    </Image>
+                    <Image Source="bookedspace.png" HeightRequest="100" WidthRequest="500" VerticalOptions="StartAndExpand">
+
+                    </Image>
+                    <Image Source="bookedspace.png" HeightRequest="100" WidthRequest="500" VerticalOptions="StartAndExpand">
+
+                    </Image>
+                    
+                    <Image Source="https://app.scalehouseai.com/Scripts/booking-ui/assets/img/clicked-space.png" HeightRequest="80" WidthRequest="50" VerticalOptions="StartAndExpand">
+
+                    </Image>-->
+
+
+
+                </StackLayout>
+                
+                
+            </Frame>
+            <Frame BackgroundColor="White" Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="1">
+                <StackLayout>
+                                        <Image Source="{Binding Slots[5].Image}" x:Name="{Binding Slots[5].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[6].Image}" x:Name="{Binding Slots[6].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[7].Image}" x:Name="{Binding Slots[7].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[8].Image}" x:Name="{Binding Slots[8].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[9].Image}" x:Name="{Binding Slots[9].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[10].Image}" x:Name="{Binding Slots[10].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+
+                                    </StackLayout>
+
+
+            </Frame>
+            <Frame BackgroundColor="White" Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" Grid.ColumnSpan="1">
+
+                <StackLayout>
+                                        <Image Source="{Binding Slots[11].Image}" x:Name="{Binding Slots[11].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[12].Image}" x:Name="{Binding Slots[12].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[13].Image}" x:Name="{Binding Slots[13].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[14].Image}" x:Name="{Binding Slots[14].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[15].Image}" x:Name="{Binding Slots[15].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+
+                                    </StackLayout>
+
+            </Frame>
+            <Frame BackgroundColor="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4">
+
+                <StackLayout>
+                                        <Image Source="{Binding Slots[16].Image}" x:Name="{Binding Slots[16].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[17].Image}" x:Name="{Binding Slots[17].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[18].Image}" x:Name="{Binding Slots[18].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[19].Image}" x:Name="{Binding Slots[19].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+                                        </Image>
+                                        <Image Source="{Binding Slots[20].Image}" x:Name="{Binding Slots[20].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+
+
+                                        </Image>
+
+                                    </StackLayout>
+
+
+            </Frame>
+
+
+          
+
+            <!--<Button BackgroundColor="#E6287A" Grid.Row="0" Grid.Column="0" Text="Button 0,0" TextColor="White" Grid.ColumnSpan="2" />
+
+            <Button BackgroundColor="#F87EB2" Grid.Row="1" Grid.Column="0" Text="Button 1,0" TextColor="White" Grid.RowSpan="2"/>
+
+            <Button BackgroundColor="#CB3B78" Grid.Row="1" Grid.Column="1" Text="Button 2,0" TextColor="White" Grid.RowSpan="2"/>
+                
+            <Button BackgroundColor="#CB3B78" Grid.Row="1" Grid.Column="2" Text="Button 2,0" TextColor="White" Grid.RowSpan="2"/>-->
+        </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

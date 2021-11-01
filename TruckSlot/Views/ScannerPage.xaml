@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               x:Class="TruckSlot.Views.ScannerPage" 
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms">
+
+
+    <NavigationPage.TitleView>
+        <Label Text="Scan Your QrCode"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="white"/>
+
+    </NavigationPage.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Ok"
+            Clicked="ToolbarItem_Clicked"
+                 />
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        
+        <StackLayout BackgroundColor="White">
+            <!--<Grid BackgroundColor="#524e48" Padding="10">
+                <Label Text="Scan Your Qr Code" FontSize="Title" FontAttributes="Bold"  HorizontalTextAlignment="Center" TextColor="White"></Label>
+            </Grid>-->
+            <Grid>
+                <Label x:Name="ScanResult" HorizontalOptions="Center" TextColor="Blue" FontSize="Large"></Label>
+            </Grid>  
+            
+            <zxing:ZXingScannerView Margin="50,100,50,150" IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult"></zxing:ZXingScannerView>
+
+            <!--<zxing:ZXingScannerView Margin="10,0,10,40" IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult"></zxing:ZXingScannerView>-->
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
