@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruckSlot.Views.PopuporPayment">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button Text="Show Popup" Clicked="btnSkilPopup_Clicked" TextColor="Red"></Button>
+            
+            <Frame 
+            x:Name="popuplayout"
+            HasShadow="True"
+            IsVisible="False"
+            Scale="0"
+            BackgroundColor="White"
+            AbsoluteLayout.LayoutFlags="All"
+           AbsoluteLayout.LayoutBounds="1,1,0.5,0.5">
+                <StackLayout>
+                    <Label Text="Want To payment" TextColor="Blue" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="30">
+                        <Button Text="NO"
+                         BackgroundColor="red"
+                         CornerRadius="50"
+                         FontSize="18"
+                         Grid.Row="0"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="1"
+                         Padding="18"
+                         TextColor="White"
+                         Margin="30,0,30,30"/>
+                        
+                        <Button Text="yes"
+                         BackgroundColor="#1337C7"
+                         CornerRadius="50"
+                         FontSize="18"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="1"
+                         Padding="18"
+                         TextColor="White"
+                         Margin="30,0,30,30" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

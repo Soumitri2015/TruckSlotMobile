@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruckSlot.MainPage"
+             Title="Booking Page">
+
+
+
+  
+
+
+
+    <!--<WebView Source="https://localhost:44358/"></WebView>-->
+      <StackLayout Padding="10">
+        <Grid BackgroundColor="#524e48" Padding="10">
+            <Label Text="Booking Slots" FontSize="Title" FontAttributes="Bold"  HorizontalTextAlignment="Center" TextColor="White"></Label>
+        </Grid>
+       
+        <!--<Label Text="" x:Name="DateTime1" FontSize="Title" HorizontalTextAlignment="Center" TextColor="Blue"></Label>-->
+        <DatePicker x:Name="DateEntry" DateSelected="MainDatePicker_DateSelected" ></DatePicker>
+        <!--<Label Text="" x:Name="DateTime1" FontSize="Title" HorizontalTextAlignment="Center" TextColor="#a6a6a6"></Label>-->
+
+        <Grid Padding="50">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <BoxView BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" HeightRequest="100" WidthRequest="50" MinimumWidthRequest="50">
+                        <BoxView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"/>
+                        </BoxView.GestureRecognizers>
+                    </BoxView>
+                    <Image BackgroundColor="#a6a6a6" Source="booked-space.png" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage" ></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                </StackLayout>
+                <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="booked-space.png" BackgroundColor="#a6a6a6" HorizontalOptions="FillAndExpand" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapImage"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                   
+
+                </StackLayout>
+                
+            </Grid>
+           
+        </Grid>
+        <!--<Button Text="Book" x:Name="BookButton"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                BackgroundColor="Navy"
+                TextColor="White"
+                Clicked="OnButtonClicked" />-->
+
+         <!--1. Floating Button-->
+        <Grid RowDefinitions="*">
+            <!--<ScrollView Grid.Row="0">
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*" Padding="30,0">
+                     Here add the code that is being explained in all the blocks, starting by number 1. 
+                </Grid>
+            </ScrollView>
+
+             Floating Button-->
+            <Button Grid.Row="0" x:Name="BookButton" Text="Book now" FontSize="{OnPlatform iOS='20', Android='15'}" FontAttributes="Bold" BackgroundColor="#62b000" BorderRadius="20" TextColor="White" HeightRequest="{OnPlatform iOS='70', Android='50'}" Margin="20" VerticalOptions="End" Clicked="OnButtonClicked"/>
+
+        </Grid>
+        <!--<controls:MyButton Image="gallery.png" Text="GALLERY" HorizontalOptions="Center"
+TextColor="#fff" FrameBackgroundColor="#ff3547" Margin="5"
+Command="{Binding CmdGallery}" CommandParam="Gallery" />-->
+
+    </StackLayout>
+
+
+
+</ContentPage>

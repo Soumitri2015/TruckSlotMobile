@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+             x:Class="TruckSlot.Views.CreditCardPage"
+              xmlns:local="clr-namespace:TruckSlot.Models">
+    <ContentPage.BindingContext>
+        <local:DataBinding></local:DataBinding>
+    </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <Label Text="Payment"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="white"/>
+
+    </NavigationPage.TitleView>
+
+    <!--<ContentPage.ToolbarItems>
+        --><!--<ToolbarItem  Icon="logo.png" Text="logo" Activated="ToolbarItem_Clicked"></ToolbarItem>--><!--
+        <ToolbarItem 
+            Text="Example Item"
+                 IconImageSource=""
+                   Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>-->
+    <!--<ScrollView>-->
+        
+        <Grid VerticalOptions="FillAndExpand"
+              BackgroundColor="White"
+              ColumnSpacing="20"
+              HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+
+                <StackLayout BackgroundColor="#8A6E65"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Start">
+                    <Frame Margin="40,10,40,30"
+                   Padding="20"
+                   Visual="Material"
+                   BackgroundColor="#DAF0FF">
+                        <Grid ColumnSpacing="30"
+                      RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding CardNumber, Converter={StaticResource CardLightConverter}}"
+                           HeightRequest="40"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           HorizontalOptions="EndAndExpand"/>
+
+                            <!--<Label Text="Card Holder Name"
+                           LineBreakMode="TailTruncation"
+                           FontSize="12"
+                           TextColor="Black"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"/>-->
+
+                            <Label Text="{Binding DisplayHolderName}"
+                            FontSize="20"
+                            TextColor="Black"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"/>
+
+                            <Label Text="Card Number"
+                           LineBreakMode="TailTruncation"
+                           FontSize="12"
+                           TextColor="Black"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"/>
+
+                            <Label Text="{Binding DisplayName}"
+                            FontSize="20"
+                            TextColor="Black"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"/>
+
+                            <Label Text="Expiration"
+                           Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="Black"
+                           Grid.Row="3"
+                           Grid.Column="0"/>
+
+                            <Label Text="{Binding DisplayExpiryDate}"
+                            FontSize="20"
+                            TextColor="Black"
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"/>
+
+                            <Label Text="Cvv"
+                            Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="Black"
+                           Grid.Row="3"
+                           Grid.Column="1"/>
+
+                            <Label Text="{Binding DisplayCVV}"
+                            FontSize="20"
+                            TextColor="Black"
+                            Grid.Row="4"
+                            Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+                <!--<StackLayout >
+                    <Label x:Name="Email"></Label>
+                    <Label x:Name="Address"></Label>
+                    <Label x:Name="Phone"></Label>
+                    <Label x:Name="Name"></Label>
+                    <Label x:Name="SlotId"></Label>
+                </StackLayout>-->
+
+            </Grid>
+
+            <Frame HasShadow="false"
+                      Padding="5"
+                    
+                      Margin="30,10,30,-10"
+                      Grid.Row="1"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+                <StackLayout Orientation="Horizontal"
+                               Spacing="10">
+                    <Image Source=""
+                               HeightRequest="30"/>
+
+                    <Entry HorizontalOptions="FillAndExpand"
+                           x:Name="HolderName"
+                               Text="{Binding HolderNameText}"
+                           Placeholder="Card Holder Name"
+                         
+                               Visual="Custom">
+                        <!--<Entry.Behaviors>
+                            <fastEntry:XamarinFastEntryBehaviour Mask="################" 
+                                                                       MaxLength="19"/>
+                        </Entry.Behaviors>-->
+                    </Entry>
+                </StackLayout>
+            </Frame>
+            <Frame HasShadow="false"
+                      Padding="5"
+                   
+                      Margin="30,20,30,10"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+                <StackLayout Orientation="Horizontal"
+                               Spacing="10">
+                    <Image Source="{Binding CardNumber,Converter={StaticResource CardConverter}}"
+                               HeightRequest="30"/>
+
+                    <Entry HorizontalOptions="FillAndExpand"
+                           x:Name="CardNumberEntry"
+                               Keyboard="Numeric"
+                               Text="{Binding Name, Mode=TwoWay}"
+                           Placeholder="Card Number"
+                         
+                               Visual="Custom">
+                        <Entry.Behaviors>
+                            <fastEntry:XamarinFastEntryBehaviour Mask="####-####-####-####" 
+                                                                       MaxLength="19"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="false"
+                      Padding="5"
+                    
+                      Margin="30,0,0,0"
+                      Grid.Row="3"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="ic_date"
+                               HeightRequest="25"/>
+                    <Entry HorizontalOptions="FillAndExpand"
+                               Keyboard="Numeric"
+                           Placeholder="Card Expiry"
+                           x:Name="CardExpiry"
+                         
+                               Text="{Binding EDate}"
+                               Visual="Custom">
+                        <Entry.Behaviors>
+                            <fastEntry:XamarinFastEntryBehaviour Mask="##/##" 
+                                                                   MaxLength="19"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="false"
+                       Padding="5"
+                      
+                      Margin="0,0,30,0"
+                      Grid.Row="3"
+                      Grid.Column="2">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="ic_cvv"
+                              HeightRequest="25"/>
+                    <Entry HorizontalOptions="FillAndExpand"
+                              Keyboard="Numeric"
+                           x:Name="CardCvv"
+                           IsPassword="True"
+                              Placeholder="Cvv"
+                           Text="{Binding CVV}"
+                              Visual="Custom">
+                        <Entry.Behaviors>
+                            <fastEntry:XamarinFastEntryBehaviour Mask="###" 
+                                                                   MaxLength="3"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </StackLayout>
+            </Frame>
+
+            <CheckBox Color="Black"
+                      x:Name="RememberMeCheck"
+                         WidthRequest="30"
+                         HorizontalOptions="Start"
+                         Margin="30,0,0,0"
+                         Visual="Material"
+                         Grid.Row="4"
+                         Grid.Column="0"/>
+
+            <Label Text="Remember me"
+                       TextColor="#040F3C"
+                       FontSize="16"
+                       VerticalOptions="Center"
+                       Grid.Row="4"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2">
+                <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+                      
+                   
+
+            <!--<Button Text="or Pay with Paypal"
+                         Grid.Row="4"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"
+                         BackgroundColor="White"
+                         BorderColor="{StaticResource LightColor}"
+                         TextColor="{StaticResource PrimaryDark}"
+                         BorderWidth="1"
+                         FontSize="18"
+                         CornerRadius="25"
+                         Padding="18"
+                         Margin="30,0"/>-->
+
+            <!--<BoxView HorizontalOptions="FillAndExpand"
+                         Color="Red"
+                         Visual="Default"
+                         HeightRequest="1"
+                         Margin="0,30"
+                         Grid.Row="5"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"/>-->
+
+            <Button Text="Book Confirm"
+                         BackgroundColor="#1337C7"
+                         CornerRadius="26"
+                         FontSize="18"
+                         Grid.Row="6"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"
+                         Padding="18"
+                         TextColor="White"
+                         Margin="30,0,30,30" Clicked="Button_Clicked"/>
+        </Grid>
+    <!--</ScrollView>-->
+    
+</ContentPage>

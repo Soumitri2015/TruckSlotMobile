@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:TruckSlot.Models" 
+             xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+             xmlns:behavior="clr-namespace:TruckSlot.Models"
+             x:Class="TruckSlot.Views.DriverInformation">
+
+    <NavigationPage.TitleView>
+        <Label Text="Driver Information"
+                    FontSize="17"
+                    FontAttributes="Bold"
+                    TextColor="white"/>
+        
+    </NavigationPage.TitleView>
+   
+    <ContentPage.Content>
+       
+            <StackLayout  BackgroundColor="White" Orientation="Vertical" Padding="10" Spacing="5">
+            <!--<Grid BackgroundColor="#524e48" Padding="10">
+                <Label Text="Driver Information" FontSize="Title" FontAttributes="Bold"  HorizontalTextAlignment="Center" TextColor="White"></Label>
+                    <Label x:Name="SlotId" TextColor="Red" FontSize="Large"></Label>
+            </Grid>-->
+               
+                <!--<StackLayout Orientation="Vertical" Spacing="10" x:Name="DriverTextBox" Margin="20">
+                  
+                     
+                    --><!--<Entry x:Name="Drivername" Text="" Placeholder="Driver Name"   
+                            HeightRequest="40"   
+                           Keyboard="Email"  
+                           TextColor="Black"
+                           />
+                    <Entry x:Name="DriverPhone" Text="{Binding DriverPhone}" Placeholder="Driver Phone"   
+                            Keyboard="Numeric"
+                           HeightRequest="40"   
+                           TextColor="Black"/>
+                    <Entry x:Name="DriverEmail" Text="{Binding DriverEmail}" Placeholder="Driver Email"   
+                           HeightRequest="40"   
+                           TextColor="Black"/>
+                    
+                    <Entry x:Name="DriverAddress" Text="{Binding DriverEmail}" Placeholder="Driver Address"   
+                           HeightRequest="60"   
+                           TextColor="Black"/>--><!--
+                   
+                    <Frame HasShadow="false"
+                           Padding="5"
+                           BorderColor="#9B9B9F"
+                           BackgroundColor="#FDFDFE"
+                           CornerRadius="5">
+
+                    <Controls:CustomEntry x:Name="Drivername" Placeholder="Driver Name" TextColor="Black" Margin="0"></Controls:CustomEntry>
+                    </Frame>
+
+                    <Frame HasShadow="false"
+                           Padding="5"
+                           BorderColor="#9B9B9F"
+                           BackgroundColor="#FDFDFE"
+                           CornerRadius="5">
+                    <Controls:CustomEntry Keyboard="Telephone" Placeholder="Driver Phone" x:Name="DriverPhone" TextColor="Black"></Controls:CustomEntry>
+                    </Frame>
+
+                    <Frame HasShadow="false"
+                           Padding="5"
+                           BorderColor="#9B9B9F"
+                           BackgroundColor="#FDFDFE"
+                           CornerRadius="5">
+                    <Controls:CustomEntry x:Name="DriverEmail" 
+                         Keyboard="Email"
+                        Placeholder="Email" TextColor="Black"></Controls:CustomEntry>
+                    </Frame>
+
+                    <Frame HasShadow="false"
+                           Padding="15"
+                           BorderColor="#9B9B9F"
+                           BackgroundColor="#FDFDFE"
+                           CornerRadius="5">
+                    <Controls:CustomEntry Placeholder="Address" x:Name="DriverAddress" TextColor="Black"></Controls:CustomEntry>
+                </Frame>
+                    <Frame HasShadow="false"
+                           Padding="5"
+                           BorderColor="#9B9B9F"
+                           BackgroundColor="#FDFDFE"
+                           CornerRadius="5">
+                        <DatePicker x:Name="DateTime1" TextColor="Black"></DatePicker>
+                    </Frame>
+
+                    --><!--<DatePicker x:Name="DateTime1" TextColor="#94949B"></DatePicker>--><!--
+                </StackLayout>-->
+
+            <StackLayout Orientation="Vertical" Spacing="10" x:Name="DriverTextBox" Margin="0">
+                <Label Text="Driver Name" TextColor="Black" FontSize="20"    CharacterSpacing="1"></Label>
+                
+                <!--<Controls:CustomEntry x:Name="Drivername"  TextColor="Black" Margin="0"></Controls:CustomEntry>-->
+                <Entry x:Name="Drivername" TextColor="Black"  Margin="0" Placeholder="eg- JohnDoe" >
+                    
+                </Entry>
+                <!--<Label Text="=" x:Name="EmailValidation"></Label>-->
+
+                <Label Text="Driver Phone" TextColor="Black" FontSize="20" CharacterSpacing="1"></Label>
+                <!--<Controls:CustomEntry x:Name="Drivername"  TextColor="Black" Margin="0"></Controls:CustomEntry>-->
+                <Entry x:Name="DriverPhone" 
+                       Keyboard="Numeric"   Visual="Custom" TextColor="Black"  Margin="0" Placeholder="eg- (123) 456-7890" >
+                    <Entry.Behaviors>
+                        <behavior:MaskedBehavior Mask="(XXX) XXX-XXXX" />
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Label Text="Email" TextColor="Black" FontSize="20" CharacterSpacing="1"></Label>
+                <!--<Controls:CustomEntry x:Name="Drivername"  TextColor="Black" Margin="0"></Controls:CustomEntry>-->
+                <Entry x:Name="DriverEmail" TextColor="Black"  Margin="0" Placeholder="eg- johndoe@gmail.com" >
+                    <Entry.Behaviors>
+                        <behavior:EmailValidatorBehavior/>
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Label Text="Address" TextColor="Black" FontSize="20" CharacterSpacing="1"></Label>
+                <!--<Controls:CustomEntry x:Name="Drivername"  TextColor="Black" Margin="0"></Controls:CustomEntry>-->
+                <Entry x:Name="DriverAddress" TextColor="Black"  Margin="0" Placeholder="eg- jacksonville" ></Entry>
+
+                <Label Text="Date" TextColor="Black" FontSize="20"  CharacterSpacing="1"></Label>
+                <!--<Controls:CustomEntry x:Name="Drivername"  TextColor="Black" Margin="0"></Controls:CustomEntry>-->
+                <!--<Entry x:Name="Date" TextColor="Black"  Margin="0" Placeholder="Address" ></Entry>-->
+                <DatePicker x:Name="Date1" TextColor="Black" Margin="0"></DatePicker>
+
+
+            </StackLayout>
+
+
+
+
+            
+
+
+
+
+
+            <!--Its For Popup Modal-->
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" x:Name="PoplayoutStack">
+                    <Frame
+                        Margin="10"
+                        Padding="10"
+            x:Name="popuplayout"
+            HasShadow="True"
+                        BorderColor="Black"
+            IsVisible="False"
+            Scale="1"
+            BackgroundColor="White"
+            AbsoluteLayout.LayoutFlags="All"
+           AbsoluteLayout.LayoutBounds="1,1,0.5,0.5">
+                        <StackLayout>
+                            <Label Text="Want To payment *" TextColor="White" FontSize="Large" VerticalTextAlignment="Center" 
+                              Background="black"  HorizontalTextAlignment="Center" Margin="-10" Padding="10" ></Label>
+                            
+                            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="30">
+                                <Button Text="NO"
+                         BackgroundColor="red"
+                         CornerRadius="50"
+                         FontSize="18"
+                         Grid.Row="0"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="1"
+                         Padding="18"
+                         TextColor="White"
+                         Margin="30,0,30,30" Clicked="NotPayment"/>
+
+                                <Button Text="yes"
+                         BackgroundColor="#1337C7"
+                         CornerRadius="50"
+                         FontSize="18"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="1"
+                         Padding="18"
+                         TextColor="White"
+                         Margin="30,0,30,30" Clicked="Button_Clicked" />
+                            </Grid>
+                            </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+            
+            <!--<Frame HasShadow="false"
+                      Padding="0"
+                      BorderColor="Black"
+                      Margin="5,30,5,10"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+                <StackLayout Orientation="Horizontal"
+                               Spacing="5">
+                  
+                        --><!--<Controls:CustomEntry Placeholder="something......."></Controls:CustomEntry>--><!--
+                        <Controls:CustomEntry HorizontalOptions="FillAndExpand"
+                          
+                           Placeholder="Driver Name"
+                         
+                               Visual="Custom">
+
+                        </Controls:CustomEntry>
+
+                       
+                    </StackLayout>
+
+            </Frame>
+                <Frame HasShadow="false"
+                      Padding="0"
+                      BorderColor="Black"
+                      Margin="5,30,5,10"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+                    <StackLayout Orientation="Horizontal"
+                               Spacing="20">
+
+                        --><!--<Controls:CustomEntry Placeholder="something......."></Controls:CustomEntry>--><!--
+                        <Controls:DatePickerCtrl x:Name="datePicker"  HeightRequest="45" HorizontalOptions="FillAndExpand" />
+
+                    </StackLayout>
+
+                </Frame>-->
+               
+
+                <Grid x:Name="ButtonsDown" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalOptions="Center">
+
+                        <Button x:Name="CloseButton" Text="Close" Padding="20"  FontSize="18"  CornerRadius="20"  BackgroundColor="red"      TextColor="White" Clicked="CloseButton_Clicked"></Button>
+                        <Button x:Name="Confirm" Margin="30,0,30,0" Padding="20"  FontSize="18"  CornerRadius="16"  BackgroundColor="#1337C7" Text="Confirm" TextColor="White" Clicked="Confirm_Clicked"></Button>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+          
+
+      
+
+
+
+
+      
+          
+      
+    </ContentPage.Content>
+</ContentPage>
+
+<!--<Button Text="Book Confirm"
+                         BackgroundColor="#1337C7"
+                         CornerRadius="26"
+                         FontSize="18"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="3"
+                         Padding="18"
+                         TextColor="White"
+                         Margin="10,0,10,10"/>-->

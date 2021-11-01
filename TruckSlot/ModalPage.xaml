@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruckSlot.ModalPage">
+
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="White" Orientation="Vertical" Padding="30" Spacing="40">
+            <Grid BackgroundColor="#524e48" Padding="10">
+                <Label Text="Driver Details" FontSize="Title" FontAttributes="Bold"  HorizontalTextAlignment="Center" TextColor="White"></Label>
+            </Grid>
+            <!--<Label 
+                Text="Its me, Your Modal Page"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="Large"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />-->
+            <Frame BackgroundColor="#BF043055" HasShadow="False" Padding="50" >
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Entry x:Name="Drivername" Text="{Binding Email}" Placeholder="Drivername"   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           Keyboard="Email"  
+                           TextColor="White"
+                         
+                           />
+                    <Entry x:Name="DriverPhone" Text="{Binding DriverPhone}" Placeholder="DriverPhone"   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="White"/>
+                    <Entry x:Name="DriverEmail" Text="{Binding DriverEmail}" Placeholder="DriverEmail"   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="White"/>
+                    <DatePicker x:Name="DateEntry" DateSelected="MainDatePicker_DateSelected" HeightRequest="40"     TextColor="White" ></DatePicker>
+                </StackLayout>
+            </Frame>
+            <!--<Entry  x:Name="Drivername" Placeholder="Drivername" PlaceholderColor="Blue" />-->
+            <!--<Entry  x:Name="DriverPhone" Placeholder="Driver Phone Number" PlaceholderColor="Blue" />
+            <Entry x:Name="DriverEmail" Placeholder="Driver Email" PlaceholderColor="Blue" />
+            <DatePicker x:Name="DateEntry" DateSelected="MainDatePicker_DateSelected" ></DatePicker>-->
+           
+
+            <!--<Button 
+                x:Name="dismissButton" 
+                Text="close me"
+                Clicked="OnDismissButtonClicked"
+            />-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button 
+                x:Name="dismissButton" 
+                Text="close"
+                Clicked="OnDismissButtonClicked"
+                    TextColor="Red"
+                   
+                 />
+                    <Button 
+                x:Name="BookButton" 
+                Text="Confirm"
+                Clicked="BookConfirm"
+                        TextColor="Blue"
+                         
+                 />
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+      
+
+</ContentPage>
