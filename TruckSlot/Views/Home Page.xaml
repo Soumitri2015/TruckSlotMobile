@@ -20,7 +20,8 @@
     <ContentPage.Content>
       
         <Grid BackgroundColor="White">
-            <Label Text="SiteName : Bhubaneswar"
+            <Label
+                   x:Name="LocationName"
                    FontSize="Large"
                    TextColor="Black"
                    BackgroundColor="White"

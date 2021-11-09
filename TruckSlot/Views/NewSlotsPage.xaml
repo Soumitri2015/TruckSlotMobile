@@ -113,7 +113,7 @@
 
                                         </Image>
                                         <Image Source="{Binding Slots[15].Image}" x:Name="{Binding Slots[15].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
-
+                                                
                                         </Image>
 
                                     </StackLayout>

@@ -62,7 +62,6 @@ namespace TruckSlot.ViewModels
                         objModel.Slots = slotList;
                         BookList.Add(objModel);
                         slotList = new List<SlotModel>();
-                        
                         slotList.Add(slotObj);
                     }
                     else

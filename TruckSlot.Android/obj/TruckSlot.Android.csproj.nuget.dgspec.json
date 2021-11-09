@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot.Android\\TruckSlot.Android.csproj": {}
+    "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot.Android\\TruckSlot.Android.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot.Android\\TruckSlot.Android.csproj": {
+    "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot.Android\\TruckSlot.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot.Android\\TruckSlot.Android.csproj",
+        "projectUniqueName": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot.Android\\TruckSlot.Android.csproj",
         "projectName": "TruckSlot.Android",
-        "projectPath": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot.Android\\TruckSlot.Android.csproj",
-        "packagesPath": "C:\\Users\\lakup\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot.Android\\obj\\",
+        "projectPath": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot.Android\\TruckSlot.Android.csproj",
+        "packagesPath": "C:\\Users\\bibhu\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lakup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bibhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot\\TruckSlot.csproj": {
-                "projectPath": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot\\TruckSlot.csproj"
+              "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot\\TruckSlot.csproj": {
+                "projectPath": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot\\TruckSlot.csproj"
               }
             }
           }
@@ -46,13 +46,17 @@
               "target": "Package",
               "version": "[7.1.0.514, )"
             },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.0.6, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2125, )"
+              "version": "[5.0.0.2196, )"
             },
             "XamarinFastEntry.Behaviors": {
               "target": "Package",
@@ -70,20 +74,20 @@
         }
       }
     },
-    "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot\\TruckSlot.csproj": {
+    "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot\\TruckSlot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot\\TruckSlot.csproj",
+        "projectUniqueName": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot\\TruckSlot.csproj",
         "projectName": "TruckSlot",
-        "projectPath": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot\\TruckSlot.csproj",
-        "packagesPath": "C:\\Users\\lakup\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot\\obj\\",
+        "projectPath": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot\\TruckSlot.csproj",
+        "packagesPath": "C:\\Users\\bibhu\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lakup\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bibhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -96,6 +100,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -107,6 +112,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
@@ -122,13 +128,21 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Xam.Plugin.Geolocator": {
+              "target": "Package",
+              "version": "[4.5.0.6, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2125, )"
+              "version": "[5.0.0.2196, )"
+            },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
             },
             "XamarinFastEntry.Behaviors": {
               "target": "Package",
@@ -149,7 +163,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

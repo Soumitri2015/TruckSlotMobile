@@ -36,7 +36,7 @@ namespace TruckSlot.Views
                 {
                     webClient.BaseAddress = "https://app.scalehouseai.com";
                     var json = webClient.DownloadString("/api/SitesAPI/GetAllLocations");
-                    var list = JsonConvert.DeserializeObject<List<LocationViewModel>>(json);
+                    var list = JsonConvert.DeserializeObject<List<LocationVM>>(json);
                     //return list.ToList();
                     this.Location.ItemsSource = list;
                 }
@@ -51,7 +51,7 @@ namespace TruckSlot.Views
         async void submit_Clicked(object sender, EventArgs e)
         {
             BookingVM booking = new BookingVM();
-            LocationViewModel sl = this.Location.SelectedItem as LocationViewModel;
+            LocationVM sl = this.Location.SelectedItem as LocationVM;
             string Location = sl.ID.ToString();
             string Slots = this.Slots.Text;
             string PhoneNo = this.PhoneNo.Text;

@@ -1,19 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "RmI4MKbk7Jx8HxJWiBZr0uxYKUZP0ivAQvjo4SU8iR1+11bCqyCcpqWBdsZVxgIvlAJ9x+lXwKzjXTC6iw6NJw==",
+  "dgSpecHash": "1tavD0IDozy/dmOj4Va2r4+kdBly6Utw1xLiOhl4P+nS7QfQ5Ul6I07SeidUfBo+VfOd0gFN1+bhTXMExAw0mQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Stephen\\TruckSlotMobile\\Source\\TruckSlot\\TruckSlot.csproj",
+  "projectFilePath": "C:\\Projects\\Stephen\\Mobile\\Soumitri2015\\TruckSlotMobile\\TruckSlot\\TruckSlot.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lakup\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\xamarin.forms\\5.0.0.2125\\xamarin.forms.5.0.0.2125.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\xamarinfastentry.behaviors\\1.1.1\\xamarinfastentry.behaviors.1.1.1.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
-    "C:\\Users\\lakup\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+    "C:\\Users\\bibhu\\.nuget\\packages\\acr.userdialogs\\7.1.0.514\\acr.userdialogs.7.1.0.514.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\xam.plugin.geolocator\\4.5.0.6\\xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2196\\xamarin.forms.maps.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\xamarinfastentry.behaviors\\1.1.1\\xamarinfastentry.behaviors.1.1.1.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\bibhu\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }
