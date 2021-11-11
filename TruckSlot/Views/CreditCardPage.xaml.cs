@@ -135,8 +135,8 @@ namespace TruckSlot.Views
 
                         ReturnAPIVM returnAPIVMTruckLot = Newtonsoft.Json.JsonConvert.DeserializeObject<ReturnAPIVM>(TaskForCreateTruckLot.Result);
                         UserDialogs.Instance.HideLoading();
-                        var disp = new NewSlotsPage(SiteID.ToString(), Slotid1.ToString());
-
+                        //var disp = new NewSlotsPage(SiteID.ToString(), Slotid1.ToString());
+                        var disp = new BookingConfirmation(returnAPIVMTruckLot.Id);
 
                         await Navigation.PushAsync(disp);
                         //App.Current.MainPage = new SlotsPage1(SiteID.ToString(), Slotid1.ToString());

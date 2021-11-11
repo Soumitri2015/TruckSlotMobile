@@ -136,3 +136,10 @@ C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\obj\iPhone
 C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\obj\iPhone\Debug\TruckSlot.iOS.csproj.CopyComplete
 C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\obj\iPhone\Debug\TruckSlot.iOS.exe
 C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\obj\iPhone\Debug\TruckSlot.iOS.pdb
+C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\bin\iPhone\Debug\Plugin.Permissions.dll
+C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\bin\iPhone\Debug\Plugin.Geolocator.dll
+C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\bin\iPhone\Debug\Xamarin.Forms.Maps.dll
+C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\bin\iPhone\Debug\Xamarin.Forms.Maps.iOS.dll
+C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\bin\iPhone\Debug\Mono.Android.dll
+C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\bin\iPhone\Debug\Mono.Android.pdb
+C:\Projects\Stephen\Mobile\Soumitri2015\TruckSlotMobile\TruckSlot.iOS\bin\iPhone\Debug\Mono.Android.xml

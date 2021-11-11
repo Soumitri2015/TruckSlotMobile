@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace TruckSlot.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookingConfirmation : ContentPage
     {
-        public BookingConfirmation( string BookingId="")
+        public BookingConfirmation( int BookingId)
         {
-            BookingReference.Text = CryptoEngine.Encrypt(BookingId);
+           var  BookingReference1 = CryptoEngine.Encrypt(BookingId.ToString());
+           // BookingReference.Text = BookingReference1;
             InitializeComponent();
         }
     }

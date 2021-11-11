@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TruckSlot.Helpers;
+using TruckSlot.Models;
+using TruckSlot.ViewModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,9 +16,14 @@ namespace TruckSlot.Views
     public partial class Home_Page : ContentPage
     {
 
-        protected override async void OnAppearing()
+        //protected void OnAppearing()
+        //{
+        //    GetLocation();
+        //}
+
+        private async Task<LocationVM> GetLocation()
         {
-            base.OnAppearing();
+            LocationVM locationVM = new LocationVM();
             try
             {
                 var location = await Geolocation.GetLastKnownLocationAsync();
@@ -34,25 +41,26 @@ namespace TruckSlot.Views
                         var placemark = placemarks?.FirstOrDefault();
                         if (placemark != null)
                         {
-                            var disp = new Home_Page(placemark.SubLocality, lat.ToString(),lon.ToString());
-                            await Navigation.PushAsync(disp);
-                           
+
+
+                            locationVM.longitude = (decimal)location.Longitude;
+                            locationVM.lattitude = (decimal)location.Latitude;
+                            locationVM.Location = placemark.SubLocality;
+                            return locationVM;
                         }
                     }
                     catch (FeatureNotSupportedException fnsEx)
                     {
-                        // Feature not supported on device
+                        return locationVM;
                     }
                     catch (Exception ex)
                     {
-                        // Handle exception that may have occurred in geocoding
+                        return locationVM;
                     }
-                    //var revposition = new Xamarin.Forms.Maps.Position(location.Latitude, location.Longitude);
-                    //var possibleAddresses = await Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(revposition);
-
+                    return locationVM;
 
                 }
-
+                return locationVM;
             }
             catch (FeatureNotSupportedException fnsEx)
             {
@@ -66,24 +74,27 @@ namespace TruckSlot.Views
             {
                 await DisplayAlert("Faild", ex.Message, "OK");
             }
-
-
+            return locationVM;
         }
-        
+
         public Home_Page(string Locaion="",string Lat="",string Long="")
         {
-            if(Locaion!=null && Locaion!="")
+            var data = Task.Run(async () => await GetLocation());
+            var res = data.Result;
+
+            if (res!=null)
             {
-                //LocationName.Text = Locaion;
-                APICall aPICall = new APICall();
-                Uri url1 = new Uri("https://app.scalehouseai.com/api/SitesAPI/GetAllSitesList?Lat/" + Lat + "&Lang=" + Long);
-                Task<string> task1 = Task.Run<string>(async () => await aPICall.GetURL(url1));
-                
-               
+                BindingContext = new SitesListByLocation(res.lattitude.ToString(),res.longitude.ToString());
+            //    //LocationName.Text = Locaion;
+            //    APICall aPICall = new APICall();
+            //    Uri url1 = new Uri("https://app.scalehouseai.com/api/SitesAPI/GetAllSitesList?Lat/" +res.lattitude + "&Lang=" + res.longitude);
+            //    Task<string> task1 = Task.Run<string>(async () => await aPICall.GetURL(url1));
+            //      List<SitesVM> sites = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SitesVM>>(task1.Result);
+            //
             }
+            InitializeComponent();
 
-            InitializeComponent();  
-
+           
 
         }
 

@@ -17,7 +17,7 @@
             Clicked="TapGestureRecognizer_Tapped"
                  />
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+    <!--<ContentPage.Content>
       
         <Grid BackgroundColor="White">
             <Label
@@ -33,5 +33,244 @@
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
+    </ContentPage.Content>-->
+    <ContentPage.Content>
+
+
+        <StackLayout>
+            <ListView ItemsSource="{Binding SitesList}"
+                                  BackgroundColor="White"
+                                  HasUnevenRows="True">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid Padding="10" Margin="4">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".5*"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+                                <Frame Grid.Column="0" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding SiteName}" ></Label>
+                                        <Label Text="{Binding Price}" ></Label>
+                                        <Label Text="{Binding Address}"></Label>
+                                        <!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>-->
+                                    </StackLayout>
+
+                                </Frame>
+                                <!--<Frame Grid.Column="2" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[2].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[2].Price}" ></Label>
+                                        <Label Text="{Binding Sites[2].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="3" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[3].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[3].Price}" ></Label>
+                                        <Label Text="{Binding Sites[3].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="4" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[4].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[4].Price}" ></Label>
+                                        <Label Text="{Binding Sites[4].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="5" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[5].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[5].Price}" ></Label>
+                                        <Label Text="{Binding Sites[5].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="6" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[6].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[6].Price}" ></Label>
+                                        <Label Text="{Binding Sites[6].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="7" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[7].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[7].Price}" ></Label>
+                                        <Label Text="{Binding Sites[7].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="8" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[8].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[8].Price}" ></Label>
+                                        <Label Text="{Binding Sites[8].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="9" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Sites[9].SiteName}" ></Label>
+                                        <Label Text="{Binding Sites[9].Price}" ></Label>
+                                        <Label Text="{Binding Sites[9].Address}"></Label>
+                                        --><!--<Image Source="{Binding Slots[0].Image}" x:Name="{Binding Slots[0].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[0].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>--><!--
+                                    </StackLayout>
+
+                                </Frame>-->
+                                <!--<Frame Grid.Column="1" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[1].Image}" x:Name="{Binding Slots[1].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[1].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="2" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[2].Image}" x:Name="{Binding Slots[2].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[2].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="3" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[3].Image}" x:Name="{Binding Slots[3].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[3].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="4" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[4].Image}" x:Name="{Binding Slots[4].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[4].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="5" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[5].Image}" x:Name="{Binding Slots[5].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[5].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="6" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[6].Image}" x:Name="{Binding Slots[6].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[6].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="7" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[7].Image}" x:Name="{Binding Slots[7].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[7].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="8" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[8].Image}" x:Name="{Binding Slots[8].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[8].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Frame Grid.Column="9" HasShadow="False" Padding="0">
+                                    <StackLayout>
+                                        <Image Source="{Binding Slots[9].Image}" x:Name="{Binding Slots[9].Name}" HeightRequest="150" WidthRequest="50" HorizontalOptions="FillAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Slots[9].Name}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
+                                </Frame>-->
+
+                            </Grid>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
